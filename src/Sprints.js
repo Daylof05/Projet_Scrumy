@@ -1,6 +1,7 @@
 import Button from '@mui/material/Button';
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
+import { Link } from 'react-router-dom';
 
 function Sprints() {
   return (
@@ -38,9 +39,13 @@ function Sprints() {
         />
 
         <br></br><br></br>
-        <Button variant="contained">Créer un sprint</Button>
+        <Link to="/sprints">
+          <Button variant="contained">Créer un sprint</Button>
+        </Link>
         <br></br><br></br>
-        <Button variant="contained">Retour</Button>
+        <Link to="/app">
+          <Button variant="contained">Retour</Button>
+        </Link>
       </center>
     </div>
   );

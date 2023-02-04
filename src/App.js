@@ -2,6 +2,7 @@ import './App.css';
 import Button from '@mui/material/Button';
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -27,17 +28,29 @@ function App() {
           }}
         />
         <br></br><br></br>
-        <Button variant="contained">Gérer les sprints</Button>
+        <Link to="/sprints">
+          <Button variant="contained">Gérer les sprints</Button>
+        </Link>
         <br></br><br></br>
-        <Button variant="contained">Gérer les stories</Button>
+        <Link to="/stories">
+          <Button variant="contained">Gérer les stories</Button>
+        </Link>
         <br></br><br></br>
-        <Button variant="contained">Participer au Daily</Button>
+        <Link to="/dailyquestionnaire">
+          <Button variant="contained">Participer au Daily</Button>
+        </Link>
         <br></br><br></br>
-        <Button variant="contained">Gérer les participants</Button>
+        <Link to="/participants">
+          <Button variant="contained">Gérer les participants</Button>
+        </Link>
         <br></br><br></br>
-        <Button variant="contained">Gérer le Daily</Button>
+        <Link to="/daily">
+          <Button variant="contained">Gérer le Daily</Button>
+        </Link>
         <br></br><br></br>
-        <Button variant="contained">Quitter la partie</Button>
+        <Link to="/">
+          <Button variant="contained">Quitter la partie</Button>
+        </Link>
       </center>
     </div>
   );

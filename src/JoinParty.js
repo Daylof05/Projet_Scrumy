@@ -2,6 +2,7 @@ import Button from '@mui/material/Button';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import TextField from '@mui/material/TextField';
+import { Link } from 'react-router-dom';
 
 function JoinParty() {
     return (
@@ -38,7 +39,9 @@ function JoinParty() {
 
             <br></br><br></br>
 
-            <Button variant="contained">Rejoindre</Button>
+            <Link to="/app">
+              <Button variant="contained">Rejoindre</Button>
+            </Link>
         </center>
       </div>
     );

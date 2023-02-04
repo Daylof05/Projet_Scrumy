@@ -1,6 +1,7 @@
 import Button from '@mui/material/Button';
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
+import { Link } from 'react-router-dom';
 
 function Questionnaire() {
   return (
@@ -43,11 +44,16 @@ function Questionnaire() {
           id="story_answer"
           margin="normal"
           defaultValue="La story progresse!"
+          InputProps={{
+            readOnly: true,
+          }}
         />
 
         <br></br><br></br>
 
-        <Button variant="contained">Retour</Button>
+        <Link to="/dailyquestionnaire">
+          <Button variant="contained">Retour</Button>
+        </Link>
       </center>
     </div>
   );
