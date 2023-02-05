@@ -39,7 +39,7 @@ function Stories() {
         />
 
         <br></br><br></br>
-        <Link to="/stories">
+        <Link to="/Creerstorie">
           <Button variant="contained">Créer une Storie</Button>
         </Link>
         <br></br><br></br>

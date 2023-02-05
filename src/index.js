@@ -15,6 +15,9 @@ import NewDaily from './NewDaily';
 import Participants from './Participants';
 import ResultatQuestionnaire from './ResultatQuestionnaire'
 import reportWebVitals from './reportWebVitals';
+import Creersprint from './Creersprint'
+import Creerstorie from './Creerstorie'
+import Creerdaily from './Creerdaily'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -30,9 +33,12 @@ root.render(
         <Route path="/dailyquestionnaire" element = {<DailyQuestionnaire/>}/>
         <Route path="/questionnaire" element = {<Questionnaire/>}/>
         <Route path="/resultatquestionnaire" element = {<ResultatQuestionnaire/>}/>
+        <Route path="/creerdaily" element = {<Creerdaily/>}/>
         <Route path="/daily" element = {<Daily/>}/>
         <Route path="/newdaily" element = {<NewDaily/>}/>
         <Route path="/participants" element = {<Participants/>}/>
+        <Route path="/creersprint" element = {<Creersprint/>}/>
+        <Route path="/creerstorie" element = {<Creerstorie/>}/>
       </Routes>
     </React.StrictMode>
   </BrowserRouter>

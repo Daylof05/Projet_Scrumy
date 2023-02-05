@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Participants() {
   return (
     <div>
-        <img className='logo' src="Scrumylogo.png"></img>
+      
       <center>
       <h1>Participants</h1>
       <TextField

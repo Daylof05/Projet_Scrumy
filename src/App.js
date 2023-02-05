@@ -44,7 +44,7 @@ function App() {
           <Button variant="contained">Gérer les participants</Button>
         </Link>
         <br></br><br></br>
-        <Link to="/daily">
+        <Link to="/Creerdaily">
           <Button variant="contained">Gérer le Daily</Button>
         </Link>
         <br></br><br></br>

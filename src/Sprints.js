@@ -39,7 +39,7 @@ function Sprints() {
         />
 
         <br></br><br></br>
-        <Link to="/sprints">
+        <Link to="/Creersprint">
           <Button variant="contained">Créer un sprint</Button>
         </Link>
         <br></br><br></br>
