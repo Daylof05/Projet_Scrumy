@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -110,6 +111,57 @@ return (
     </Link>
   </div>
 );
+=======
+import Header from './Header';
+
+function Sprints() {
+  return (
+    <div>
+      <center>
+        <Header />
+        <TextField
+          id="party-name"
+          margin="normal"
+          label=""
+          defaultValue="Nom de la partie"
+          InputProps={{
+            readOnly: true,
+          }}
+        />
+        <br></br>
+        <TextField
+          id="party-code"
+          margin="normal"
+          label=""
+          defaultValue="Code:"
+          InputProps={{
+            readOnly: true,
+          }}
+        />
+        <br></br><br></br>
+
+        <TextField
+          id="sprint"
+          margin="normal"
+          label="Sprint 1:"
+          defaultValue="Oui"
+          InputProps={{
+            readOnly: true,
+          }}
+        />
+
+        <br></br><br></br>
+        <Link to="/Creersprint">
+          <Button variant="contained">Créer un sprint</Button>
+        </Link>
+        <br></br><br></br>
+        <Link to="/app">
+          <Button variant="contained">Retour</Button>
+        </Link>
+      </center>
+    </div>
+  );
+>>>>>>> origin/master2
 }
 
 export default Sprints;

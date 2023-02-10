@@ -2,12 +2,13 @@ import './NewDaily.css';
 import Button from '@mui/material/Button';
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
+import Header from './Header';
 
 function NewDaily() {
   return (
     <div>
-        <img className='logo' src="Scrumylogo.png"></img>
       <center>
+        <Header />
 
         <TextField
           id="party-name"

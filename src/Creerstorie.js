@@ -2,9 +2,11 @@ import Button from '@mui/material/Button';
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 
 function CreerStories() {
   return (
+<<<<<<< HEAD
     
     <center>
     <br></br>
@@ -24,6 +26,29 @@ function CreerStories() {
             defaultValue=""
             />
              <br></br><br></br>
+=======
+
+    <div>
+      <center>
+        <Header />
+        <br></br>
+        <TextField
+          required
+          id="NomStorie"
+          label="Nom de la storie:"
+          defaultValue=""
+          />
+
+        <br></br><br></br>
+
+        <TextField
+          required
+          id="NbPE"
+          label="Nombre de PE:"
+          defaultValue=""
+          />
+        <br></br><br></br>
+>>>>>>> origin/master2
 
         <br></br><br></br>
         <Link to="/stories">
@@ -34,8 +59,7 @@ function CreerStories() {
           <Button variant="contained">Retour</Button>
         </Link>
       </center>
-
-    
+    </div>
   );
 }
 

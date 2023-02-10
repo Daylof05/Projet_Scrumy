@@ -3,21 +3,34 @@ import Button from '@mui/material/Button';
 import React from 'react';
 import TextField from '@mui/material/TextField';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 
 function App() {
 
 const partyName = localStorage.getItem("partyName");
+<<<<<<< HEAD
+=======
+const partyCode = localStorage.getItem("partyCode");
+>>>>>>> origin/master2
 
   return (
     <div>
       <center>
 
+<<<<<<< HEAD
 
+=======
+        <Header />
+>>>>>>> origin/master2
 
         <TextField
           id="party-name"
           margin="normal"
+<<<<<<< HEAD
           label=""
+=======
+          label="Nom de la partie"
+>>>>>>> origin/master2
           defaultValue={partyName}
           InputProps={{
             readOnly: true,
@@ -27,8 +40,8 @@ const partyName = localStorage.getItem("partyName");
         <TextField
           id="party-code"
           margin="normal"
-          label=""
-          defaultValue="Code:"
+          label="Code de la partie"
+          defaultValue={partyCode}
           InputProps={{
             readOnly: true,
           }}
