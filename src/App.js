@@ -1,18 +1,24 @@
 import './App.css';
 import Button from '@mui/material/Button';
-import * as React from 'react';
+import React from 'react';
 import TextField from '@mui/material/TextField';
 import { Link } from 'react-router-dom';
 
 function App() {
+
+const partyName = localStorage.getItem("partyName");
+
   return (
     <div>
       <center>
+
+
+
         <TextField
           id="party-name"
           margin="normal"
           label=""
-          defaultValue="Nom de la partie"
+          defaultValue={partyName}
           InputProps={{
             readOnly: true,
           }}
@@ -28,7 +34,7 @@ function App() {
           }}
         />
         <br></br><br></br>
-        <Link to="/sprints">
+        <Link to="/Creersprint">
           <Button variant="contained">Gérer les sprints</Button>
         </Link>
         <br></br><br></br>

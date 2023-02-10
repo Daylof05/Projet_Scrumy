@@ -8,12 +8,22 @@ function CreerStories() {
     
     <center>
     <br></br>
-<textarea id='Nomstorie' placeholder='Nom de la storie'rows="3" cols="7"> 
+    <TextField
+            required
+            id="NomStorie"
+            label="Nom de la storie:"
+            defaultValue=""
+            />
 
-</textarea>
-<br></br><br></br>
-<textarea id='Nbpe' placeholder='Nombre de PE' rows="2" cols="13">
-</textarea>
+            <br></br><br></br>
+
+            <TextField
+            required
+            id="NbPE"
+            label="Nombre de PE:"
+            defaultValue=""
+            />
+             <br></br><br></br>
 
         <br></br><br></br>
         <Link to="/stories">

@@ -1,36 +1,83 @@
+import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
-import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import { Link } from 'react-router-dom';
-import './Creersprint.css';
 
 function Creersprint() {
-  return (
-    
-    <center>
-    <br></br>
-<textarea id='NumSprint' placeholder='Numéro du sprint'rows="3" cols="7"> 
+const [numSprint, setNumSprint] = useState('');
+const [dateSprint, setDateSprint] = useState('');
+const [dureeSprint, setDureeSprint] = useState('');
+const [sprints, setSprints] = useState([]);
 
-</textarea>
-<br></br><br></br>
-<textarea id='DateSprint' placeholder='Date du sprint' rows="2" cols="13">
-</textarea>
-<br></br><br></br>
-<textarea id='DureeSprint' placeholder='Durée du sprint' rows="2" cols="13">
-</textarea>
-
-        <br></br><br></br>
-        <Link to="/stories">
-          <Button variant="contained">Créer un sprint</Button>
-        </Link>
-        <br></br><br></br>
-        <Link to="/app">
-          <Button variant="contained">Retour</Button>
-        </Link>
-      </center>
-
-    
-  );
+useEffect(() => {
+const data = localStorage.getItem('sprints');
+if (data) {
+setSprints(JSON.parse(data));
 }
+}, []);
+
+const handleSubmit = (e) => {
+e.preventDefault();
+setSprints([...sprints, { numSprint, dateSprint, dureeSprint }]);
+localStorage.setItem('sprints', JSON.stringify([...sprints, { numSprint, dateSprint, dureeSprint }]));
+setNumSprint('');
+setDateSprint('');
+setDureeSprint('');
+};
+
+
+
+return (
+<div style={{ padding: '20px' }}>
+<center>
+<br />
+    <TextField
+    required
+    id="NumSprint"
+    label="Numéro du Sprint:"
+    type="number"
+    value={numSprint}
+    onChange={(e) => setNumSprint(e.target.value)}
+    />
+    <br />
+    <br />
+
+    <TextField
+      required
+      id="DateSprint"
+      label=""
+      type="date"
+      value={dateSprint}
+      
+      
+      onChange={(e) => setDateSprint(e.target.value)}
+    />
+    <br />
+    <br />
+
+    <TextField
+      required
+      id="DureeSprint"
+      label="Durée du sprint en semaines:"
+      type="number"
+      value={dureeSprint}
+      onChange={(e) => setDureeSprint(e.target.value)}
+    />
+
+    <br />
+    <br />
+    
+      <Button variant="contained" onClick={handleSubmit}>Créer Sprint</Button>
+   
+    <br />
+    <br />
+    <Link to="/sprints">
+      <Button variant="contained">Voir Sprints</Button>
+    </Link>
+  </center>
+</div>
+);
+}
+
 
 export default Creersprint;

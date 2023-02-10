@@ -1,4 +1,3 @@
-
 import Button from '@mui/material/Button';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -6,6 +5,14 @@ import TextField from '@mui/material/TextField';
 import { Link } from 'react-router-dom';
 
 function CreateParty() {
+
+  const handleClick = () => {
+    const partyName = document.getElementById("party_name").value;
+    const userName = document.getElementById("pseudo_creator").value;
+    localStorage.setItem("partyName", partyName);
+    localStorage.setItem("userName", userName);
+  }
+
     return (
       <div>
         <center>
@@ -41,11 +48,10 @@ function CreateParty() {
             <br></br><br></br>
 
             <Link to="/app">
-              <Button variant="contained">Créer</Button>
+              <Button id="createPartyButton" variant="contained" onClick={handleClick}>Créer</Button>
             </Link>
         </center>
       </div>
     );
   }
-  
   export default CreateParty;

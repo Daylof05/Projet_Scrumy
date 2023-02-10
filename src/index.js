@@ -6,7 +6,6 @@ import Accueil from './Accueil'
 import CreateParty from './CreateParty'
 import JoinParty from './JoinParty'
 import App from './App';
-import Sprints from './Sprints'
 import Stories from './Stories'
 import DailyQuestionnaire from './DailyQuestionnaire'
 import Questionnaire from './Questionnaire'
@@ -16,6 +15,7 @@ import Participants from './Participants';
 import ResultatQuestionnaire from './ResultatQuestionnaire'
 import reportWebVitals from './reportWebVitals';
 import Creersprint from './Creersprint'
+import Sprints from './Sprints'
 import Creerstorie from './Creerstorie'
 import Creerdaily from './Creerdaily'
 
@@ -28,7 +28,6 @@ root.render(
         <Route path="/createparty" element = {<CreateParty/>}/>      
         <Route path="/joinparty" element = {<JoinParty/>}/>
         <Route path="/app" element = {<App/>}/>
-        <Route path="/sprints" element = {<Sprints/>}/>
         <Route path="/stories" element = {<Stories/>}/>
         <Route path="/dailyquestionnaire" element = {<DailyQuestionnaire/>}/>
         <Route path="/questionnaire" element = {<Questionnaire/>}/>
@@ -38,6 +37,7 @@ root.render(
         <Route path="/newdaily" element = {<NewDaily/>}/>
         <Route path="/participants" element = {<Participants/>}/>
         <Route path="/creersprint" element = {<Creersprint/>}/>
+        <Route path="/sprints" element = {<Sprints/>}/>
         <Route path="/creerstorie" element = {<Creerstorie/>}/>
       </Routes>
     </React.StrictMode>
